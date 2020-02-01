@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>GRADE CALCULATOR</h1>
+<br><br>
+
+
+<form onsubmit="return GetGrade()">
+    <input type="radio" name="type" value="weights" onclick="SetTypeOfGrader()" id="by_weight" checked> By Weighted
+    Percentages<br>
+    <input type="radio" name="type" value="points" onclick="SetTypeOfGrader()" id="by_points"> By Points<br>
+
+    <div id="by_point_block" style="display: none">
+        <h3>hello world</h3>
+        <table align="center" id="point_table">
+            <tr>
+                <th>Assignment</th>
+                <th>Points Earned</th>
+                <th>Total Points</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" size="6" id="grade1_p"></td>
+                <td><input type="text" size="6" id="weight1_p"></td>
+            </tr>
+                <td>2</td>
+                <td><input type="text" size="6" id="grade2_p"></td>
+                <td><input type="text" size="6" id="weight2_p"></td>
+            </tr>
+                <td>3</td>
+                <td><input type="text" size="6" id="grade3_p"></td>
+                <td><input type="text" size="6" id="weight3_p"></td>
+            </tr>
+                <td>4</td>
+                <td><input type="text" size="6" id="grade4_p"></td>
+                <td><input type="text" size="6" id="weight4_p"></td>
+            </tr>
+                <td>5</td>
+                <td><input type="text" size="6" id="grade5_p"></td>
+                <td><input type="text" size="6" id="weight5_p"></td>
+            </tr>
+                <td>6</td>
+                <td><input type="text" size="6" id="grade6_p"></td>
+                <td><input type="text" size="6" id="weight6_p"></td>
+            </tr>
+                <td>7</td>
+                <td><input type="text" size="6" id="grade7_p"></td>
+                <td><input type="text" size="6" id="weight7_p"></td>
+            </tr>
+                <td>8</td>
+                <td><input type="text" size="6" id="grade8_p"></td>
+                <td><input type="text" size="6" id="weight8_p"></td>
+            </tr>
+                <td>9</td>
+                <td><input type="text" size="6" id="grade9_p"></td>
+                <td><input type="text" size="6" id="weight9_p"></td>
+            </tr>
+                <td>10</td>
+                <td><input type="text" size="6" id="grade10_p"></td>
+                <td><input type="text" size="6" id="weight10_p"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="by_percent_block">
+        <table align="center" id="percent_table">
+            <tr>
+                <th>Assignment</th>
+                <th>Grade</th>
+                <th>Weight (Percent)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" size="6" id="grade1"></td>
+                <td><input type="text" size="6" id="weight1"></td>
+            </tr>
+            <td>2</td>
+            <td><input type="text" size="6" id="grade2"></td>
+            <td><input type="text" size="6" id="weight2"></td>
+            </tr>
+            <td>3</td>
+            <td><input type="text" size="6" id="grade3"></td>
+            <td><input type="text" size="6" id="weight3"></td>
+            </tr>
+            <td>4</td>
+            <td><input type="text" size="6" id="grade4"></td>
+            <td><input type="text" size="6" id="weight4"></td>
+            </tr>
+            <td>5</td>
+            <td><input type="text" size="6" id="grade5"></td>
+            <td><input type="text" size="6" id="weight5"></td>
+            </tr>
+            <td>6</td>
+            <td><input type="text" size="6" id="grade6"></td>
+            <td><input type="text" size="6" id="weight6"></td>
+            </tr>
+            <td>7</td>
+            <td><input type="text" size="6" id="grade7"></td>
+            <td><input type="text" size="6" id="weight7"></td>
+            </tr>
+            <td>8</td>
+            <td><input type="text" size="6" id="grade8"></td>
+            <td><input type="text" size="6" id="weight8"></td>
+            </tr>
+            <td>9</td>
+            <td><input type="text" size="6" id="grade9"></td>
+            <td><input type="text" size="6" id="weight9"></td>
+            </tr>
+            <td>10</td>
+            <td><input type="text" size="6" id="grade10"></td>
+            <td><input type="text" size="6" id="weight10"></td>
+            </tr>
+        </table>
+    </div>
+
+    <p align="center"><input type="submit" value="Submit"></p>
+
+    <div id="your_grade">
+
+    </div>
+
+
+</form>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
