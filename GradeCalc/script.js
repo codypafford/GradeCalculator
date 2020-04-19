@@ -26,7 +26,7 @@ function PointGrader() {
     }
 
 
-    var final_grade = points_received/total_points;
+    var final_grade = (points_received/total_points) * 100;
 
     document.getElementById("your_grade").innerHTML = '<div align="center"><span> YOUR FINAL GRADE: ' +  final_grade + '%</span></div>';
 
@@ -50,14 +50,14 @@ function GetGrade(){
 function myFunction(){
 
 
-    var final_grade;
+    var final_grade = 0;
     var final_weight_sums = 0;
 
 
     var i;
     for (i = 1; i <= 10; i++) {
         var weight = convert(parseInt(document.getElementById("weight" + i).value));
-        final_grade = finall_grade + convert(parseInt(document.getElementById("grade" + i).value)) * weight;
+        final_grade = final_grade + convert(parseInt(document.getElementById("grade" + i).value)) * weight;
         final_weight_sums = final_weight_sums + weight;
     }
 
